@@ -1,0 +1,129 @@
+/* ======= Reset dan Font ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Mengatur body agar menggunakan BG1.png sebagai background utama */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../img/BG1.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Untuk memberi latar semi-transparan pada konten agar teks terbaca */
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ======= Transisi Halaman ======= */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.page-transition.active {
+  opacity: 1;
+}
+
+/* ======= Navbar ======= */
+.navbar {
+      background-color: #2d346b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-family: Georgia, serif;
+      font-size: 1.8rem;
+    }
+    .navbar .logo a {
+    color: white;
+    text-decoration: none;
+    }   
+    .navbar .logo a:hover {
+    color: rgb(255, 255, 255);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.3s ease;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #a9b5df; 
+      transition: width 0.3s ease-in-out;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .subtext {
+      text-align: center;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      color: #2d346b;
+      font-weight: bold;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      padding: 25px;
+      margin-bottom: 30px;
+      border: 2px #2d346b solid;
+    }
+
+    .card h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+
+    strong {
+      font-weight: bold;
+    }

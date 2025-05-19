@@ -1,0 +1,317 @@
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../img/BG1.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  color: #2d346b;
+  line-height: 1.6;
+}
+    header {
+      background-color: #2d346b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    header h1 {
+      font-family: Georgia, serif;
+      font-size: 1.8rem;
+    }
+    header img {
+      height: 30px;
+      margin-right: 10px;
+    }  
+    
+    /* Hamburger Menu Styles */
+    .hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      z-index: 20;
+      background-color: #3b4252;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    
+    .hamburger:hover {
+      background-color: #4c566a;
+    }
+    
+    .hamburger span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 24px;
+      background: white;
+      border-radius: 3px;
+      opacity: 1;
+      left: 8px;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    
+    .hamburger span:nth-child(1) {
+      top: 13px;
+    }
+    
+    .hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+      top: 19px;
+    }
+    
+    .hamburger span:nth-child(4) {
+      top: 25px;
+    }
+    
+    .hamburger.open span:nth-child(1) {
+      top: 10px;
+      width: 0%;
+      left: 50%;
+    }
+    
+    .hamburger.open span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    
+    .hamburger.open span:nth-child(4) {
+      top: 10px;
+      width: 0%;
+      left: 50%;
+    }
+    
+    /* Navigation Menu */
+    .menu {
+      position: fixed;
+      top: 80px;
+      right: 30px;
+      width: 220px;
+      background-color: #293241;
+      z-index: 10;
+      border-radius: 20px;
+      transform: scale(0);
+      transform-origin: top right;
+      transition: transform 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    
+    .menu.active {
+      transform: scale(1);
+    }
+    
+    .menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s;
+      border-left: 4px solid transparent;
+    }
+    
+    .menu a:hover {
+      background-color: #3b4252;
+      border-left: 4px solid #60a5fa;
+      padding-left: 30px;
+    }
+    
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 5;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ======= Transisi Halaman ======= */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.page-transition.active {
+  opacity: 1;
+}
+
+    main {
+      flex: 1;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+
+    main h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #2d346b;
+      font-weight: bold;
+    }
+
+    .content {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      flex: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .card.form {
+      width: 450px;
+    }
+
+    .card.visual {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    .form-group input.error {
+      border-color: red;
+      background: #ffe5e5;
+    }
+
+    button {
+      margin-top: 1.75rem;
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #7886c7;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #2d346b;
+    }
+
+    #hasilBox {
+      background-color: #e5e7eb;
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 100px;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .chart-area {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .chart-box {
+      flex: 1;
+      min-width: 250px;
+      background: #f3f4f6;
+      border-radius: 8px;
+      padding: 1rem;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chart-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #d1d5db;
+      width: 100%;
+      padding-bottom: 0.5rem;
+      color: black;
+    }
+
+    canvas {
+      max-width: 100%;
+      max-height: 220px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .chart-area {
+        flex-direction: column;
+      }
+    }
+    
+
+    label {
+      font-weight: 600;
+      margin-top: 1.25rem;
+      font-size: 0.95rem;
+      color: #000000;
+      text-align: left;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.8rem;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #f9fafb;
+    }
