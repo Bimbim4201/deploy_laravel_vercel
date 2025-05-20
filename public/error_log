@@ -1,0 +1,1 @@
+[20-May-2025 14:49:09 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 5.6.40. in /home/modalbal/laravel/vendor/composer/platform_check.php on line 25

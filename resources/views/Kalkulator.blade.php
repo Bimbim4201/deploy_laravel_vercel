@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BalikModalin | {{ $title }}</title>
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/Kalkulator.css" />
   
 </head>
@@ -27,22 +29,22 @@
   </header>
 
   <main>
-    <h1>Pilih Kalkulatormu!</h1>
+    <h1 data-aos="fade">Pilih Kalkulatormu!</h1>
     <div class="calculator-buttons">
-    <a href="/HitungBalikModal"><div><strong><h4>KALKULATOR BALIK MODAL</h4></strong>
+    <a href="/HitungBalikModal"><div data-aos="fade-right"><strong><h4>KALKULATOR BALIK MODAL</h4></strong>
         <p>Ketahui berapa barang yang harus terjual untuk balik modal (impas).</p>
     </div></a> 
-    <a href="/TargetLaba"><div><strong><h4>KALKULATOR TARGET LABA</h4></strong>
+    <a href="/TargetLaba"><div data-aos="fade-up"><strong><h4>KALKULATOR TARGET LABA</h4></strong>
         <p>Hitung berapa banyak barang yang perlu dijual untuk mencapai keuntungan tertentu.</p>
     </div></a>
-    <a href="/LabaMaksimum"><div><strong><h4>KALKULATOR LABA MAKSIMUM</h4></strong>
+    <a href="/LabaMaksimum"><div data-aos="fade-left"><strong><h4>KALKULATOR LABA MAKSIMUM</h4></strong>
         <p>Hitung potensi laba maksimum dari modal yang dimiliki.</p>
       </div></a>
     </div>
   </main>
 
    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
       <!-- Kolom 1 -->
       <div class="footer-column">
         <div class="footer-header">
@@ -126,5 +128,12 @@
       });
   
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+});
+</script>
   </body>
 </html>

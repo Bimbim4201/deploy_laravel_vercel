@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BalikModalin | {{ $title }}</title>
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/Informasi.css"> 
 </head>
 
 <body class="page-transition">
   <header class="navbar">
-    <div class="left" style="display: flex; align-items: center; gap: 0.5rem;">
+    <div  class="left" style="display: flex; align-items: center; gap: 0.5rem;">
       <a href="/Index">
         <img src="img/Logo.png" alt="Logo BalikModalin" style="width: 40px; height: 40px; border-radius: 50%;">
       </a>
@@ -25,25 +27,25 @@
       </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <h2>Tentang BalikModalin</h2>
     <p>BalikModalin adalah alat bantu online untuk menghitung laba, menentukan target penjualan, dan mengetahui titik balik modal...</p>
   </section>
 
-  <section class="features">
+  <section class="features" data-aos="fade-up">
     <h2>Fitur Kalkulator di BalikModalin</h2>
   <div class="timeline">
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-aos="fade-up">
       <a href="/LabaMaksimum" class="timeline-circle">01</a>
       <h3>Kalkulator Balik Modal</h3>
       <p>Ketahui berapa barang yang harus terjual untuk balik modal (impas)</p>
     </div>
-    <div class="timeline-item right">
+    <div class="timeline-item right" data-aos="fade-up">
       <a href="/TargetLaba" class="timeline-circle">02</a>
       <h3>Kalkulator Target Laba</h3>
       <p>Hitung berapa banyak barang yang perlu dijual untuk mencapai target keuntungan tertentu</p>
     </div>
-    <div class="timeline-item left">
+    <div class="timeline-item left" data-aos="fade-up">
       <a href="/HitungBalikModal" class="timeline-circle">03</a>
       <h3>Kalkulator Laba Maksimum</h3>
       <p>Hitung potensi laba maksimum dari modal yang dimiliki</p>
@@ -51,60 +53,60 @@
   </div>
 
     <div class="summary">
-      <div>
+      <div  data-aos="fade-right">
         500+<br>Pegguna Aktif
       </div>
-      <div>
+      <div  data-aos="fade-left">
         300+<br>Usaha Terbantu
       </div>
     </div>
   </section>
 
-  <section class="how-it-works">
+  <section class="how-it-works" data-aos="fade-up">
     <h2>Cara Kerja BalikModalin</h2>
     <p>Berikut Tahapan dan juga proses perhitungan BalikModalin</p>
   </section>
 
-  <section class="steps">
-    <div class="step" data-step="1">
+  <section class="steps" >
+    <div class="step" data-step="1" data-aos="fade-up">
       <div>
         <h3>Memahami Pedoman Penggunaan</h3>
         <p>
-          <a href="#">Pergi</a> ke halaman Pedoman Penggunaan
+          <a href="https://drive.google.com/file/d/1Rpy1FSqtLE5lWgzEY6PlQharTor51RUE/view?usp=drive_link">Pergi</a> ke halaman Pedoman Penggunaan
         </p>
       </div>
     </div>
-    <div class="step" data-step="2">
+    <div class="step" data-step="2" data-aos="fade-up">
       <div>
         <h3>Pilih Kalkulator</h3>
         <p>Sesuaikan dengan kebutuhan (Kalkulator Balik Modal, Target Laba, dan Laba Maksimum)</p>
       </div>
     </div>
-    <div class="step" data-step="3">
+    <div class="step" data-step="3" data-aos="fade-up"> 
       <div>
         <h3>Input Data Usaha</h3>
         <p>Pengguna memasukan seluruh inputan berdasarkan kalkulator yang dipilih</p>
       </div>
     </div>
-    <div class="step" data-step="4">
+    <div class="step" data-step="4" data-aos="fade-up">
       <div>
         <h3>Klik Hitung</h3>
         <p>Dapatkan hasil langsung tanpa perlu instalasi tambahan</p>
       </div>
     </div>
-    <div class="step" data-step="5">
+    <div class="step" data-step="5" data-aos="fade-up">
       <div>
         <h3>Baca Hasil & Insight</h3>
         <p>Nikmati penjelasan hasil secara otomatis dan mudah dimengerti</p>
       </div>
     </div>
-    <div class="step" data-step="6">
+    <div class="step" data-step="6" data-aos="fade-up">
       <div>
         <h3>Unduh Hasil</h3>
         <p>Unduh hasil dalam format txt untuk referensi di lain waktu</p>
       </div>
     </div>
-    <div class="step" data-step="7">
+    <div class="step" data-step="7" data-aos="fade-up">
       <div>
         <h3>Riwayat Hasil</h3>
         <p>Semua hasil yang pernah dihitung akan tersimpan di dalam akun pengguna</p>
@@ -112,9 +114,9 @@
     </div>
   </section>
 
-  <section class="faq">
-    <h2>Pertanyaan Umum (FAQ)</h2>
-    <div class="faq-item" onclick="toggleFaq(this)">
+  <section class="faq" >
+    <h2 data-aos="fade-up">Pertanyaan Umum (FAQ)</h2>
+    <div class="faq-item" onclick="toggleFaq(this)" data-aos="fade-up">
       <div class="faq-question">
         Apakah saya perlu punya latar belakang di bidang ekonomi atau matematika untuk menggunakan BalikModalin?
         <span class="faq-toggle">▼</span>
@@ -123,7 +125,7 @@
         Tidak, Anda tidak perlu latar belakang khusus. BalikModalin dirancang agar mudah digunakan siapa saja!
       </div>
     </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-item" onclick="toggleFaq(this)" data-aos="fade-up">
       <div class="faq-question">
         Bagaimana jika saya tidak tahu harga beli per satuan barang?
         <span class="faq-toggle">▼</span>
@@ -134,39 +136,39 @@
     </div>
   </section>
 
-  <section class="tim-balikmodalin">
+  <section class="tim-balikmodalin" data-aos="fade-up">
     <h1 class="timbalikmodalin">Tim BalikModalin</h1>
     <p>Mengenal lebih dekat dengan tim hebat yang berdedikasi <br>
       untuk mengembangkan solusi berkelanjutan.</p>
   </section>
 
-  <section class="team">
+  <section class="team" >
     <div class="team-members">
-      <div class="member">
+      <div class="member" data-aos="fade-right">
         <img src="img/Bila.jpg" alt="Anggota Tim 1">
         <h3>Nabila Rohmatul A.</h3>
-        <h4>KETUA TIM</h4>
-        <p>Memimpin dan mengkoordinasikan seluruh aspek pengembangan website.</p>
+        <h4>ANALYSIST & DOCUMENTATION</h4>
+        <p>Analisis Perancangan & Penyusunan Dokumentasi Website</p>
       </div>
-      <div class="member">
+      <div class="member" data-aos="fade-right">
         <img src="img/Nadiaz.jpg" alt="Anggota Tim 2">
         <h3>M. Zaki Zaidan B.</h3>
         <h4>FRONTEND DEVELOPER</h4>
         <p>Pengembangan Antarmuka Pengguna</p>
       </div>
-      <div class="member">
+      <div class="member" data-aos="fade">
         <img src="img/Hans.jpg" alt="Anggota Tim 3">
         <h3>Khansa Rasendriya A.</h3>
         <h4>FRONTEND DEVELOPER</h4>
         <p>Pengembangan Antarmuka Pengguna</p>
       </div>
-      <div class="member">
+      <div class="member" data-aos="fade-left">
         <img src="img/Sigma.jpg" alt="Anggota Tim 2">
         <h3>Bimantara P. Jatnika</h3>
         <h4>BACKEND DEVELOPER</h4>
         <p>Pengembangan Backend dan Infrastruktur Sistem</p>
       </div>
-      <div class="member">
+      <div class="member" data-aos="fade-left">
         <img src="img/Adit.jpg" alt="Anggota Tim 3">
         <h3>Aditya Ihsan M.</h3>
         <h4>UI/UX DESIGNER</h4>
@@ -176,7 +178,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-up">
     <!-- Kolom 1 -->
     <div class="footer-column">
       <div class="footer-header">
@@ -294,5 +296,12 @@
       });
     });
   </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+          AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
 </body>
 </html>

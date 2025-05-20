@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Balik Modalin | {{ $title }}</title>
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/Belajar.css"/>
 </head>
 
@@ -27,7 +29,7 @@
 
   <div class="container">
     <div class="subtext">Pelajari Cara Kalkulator di BalikModalin Bekerja</div>
-    <div class="card">
+    <div class="card"data-aos="fade-up">
         <h2>1. Kalkulator Titik Impas (Break Even) / Balik Modal</h2>
         <h3>Fungsi Dasar:</h3>
         <p>Diberikan:</p>
@@ -67,7 +69,7 @@
         </ul>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up">
         <h2>2. Kalkulator Jumlah Barang untuk Target Laba</h2>
         <h3>Fungsi Dasar:</h3>
         <p>Diberikan:</p>
@@ -103,7 +105,7 @@
         <img src="img/Materi/TargetLaba6.jpg" style="width: 50%; height: auto; border-radius: 10px;">
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up">
         <h2>3. Kalkulator Laba Maksimum dengan Penurunan Harga</h2>
         <h3>Fungsi Dasar:</h3>
         <p>Diberikan:</p>
@@ -177,5 +179,12 @@
       });
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+});
+</script>
 </body>
 </html>

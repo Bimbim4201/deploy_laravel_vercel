@@ -43,6 +43,6 @@ class RiwayatController extends Controller
         $BalikModal = BalikModal::latest()->get();
 
         // Kirim ke view
-        return view('riwayat', compact('Riwayat', 'LabaMaksimum', 'BalikModal'));
+        return view('Riwayat', compact('Riwayat', 'LabaMaksimum', 'BalikModal'));
     }
 }

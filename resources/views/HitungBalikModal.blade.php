@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> BEP | BalikModalin </title>
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="css/HitungBalikModal.css">
 </head>
 
@@ -23,10 +25,11 @@
     <span></span>
     <span></span>
     <span></span>
+    <span></span>
   </div>
 </header>
-
 <div class="menu" id="mobile-menu">
+  <a href="/Kalkulator"><strong>Kalkulator</strong></a>
   <a href="/HitungBalikModal">Balik Modal</a>
   <a href="/TargetLaba">Target Laba</a>
   <a href="/LabaMaksimum">Laba Maksimum</a>
@@ -67,11 +70,11 @@
 // Hamburger Menu Functionality End
 </script>
 
-<div class="subtext">
+<div class="subtext" data-aos="fade-up">
   Cari tahu kapan kamu balik modal!
 </div>
 <main>
-  <div class="form-card">
+  <div class="form-card" data-aos="fade-right">
     <form method="POST" action="{{ route('balikmodal.store') }}">
       @csrf
     <div class="hasil-box" id="hasil">
@@ -95,7 +98,7 @@
   </form>
     </div>
 
-  <div class="visualisasi-wrapper">
+  <div class="visualisasi-wrapper" data-aos="fade-left">
     <div class="visualisasi">
       <div class="grafik-card">
         <h3>Visualisasi Input</h3>
@@ -302,5 +305,12 @@
       });
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+});
+</script>
 </body>
 </html>

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BalikModalin | {{ $title }}</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="css/Index.css" />
   </head>
 
@@ -27,8 +29,8 @@
 
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
+    <section class="hero" >
+      <div class="hero-text" data-aos="fade-right">
         <h1>HITUNG UNTUNGMU,<br>JANGAN ASAL JALAN!</h1>
         <p>BalikModalin bantu kamu kalkulasi usaha dengan pendekatan Kalkulus</p>
         <div class="buttons">
@@ -36,17 +38,17 @@
           <button onclick="window.location.href='/Informasi';" class="btn-secondary"><i class="fas fa-circle-info"></i> Pelajari Lebih Lanjut</button>
         </div>
       </div>
-      <div class="hero-img">
+      <div class="hero-img" data-aos="fade-left">
         <img src="img/Image.png" alt="Ilustrasi kalkulasi usaha" style="width: 600px; height: 600px; border-radius: 50%;">
       </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up">
       <h2 class="section-title">Tentang BalikModalin</h2>
       <p class="section-subtext">BalikModalin adalah platform edukatif dan praktis yang dirancang untuk membantu pelaku usaha kecil menghitung strategi keuntungan secara matematis menggunakan konsep turunan dalam kalkulus. Dengan tiga kalkulator cerdas, pengguna dapat menghitung laba target, laba maksimum, dan titik balik modal dengan cepat. </p>
     </section>
 
-    <section class="why-section">
+    <section class="why-section" data-aos="fade-up">
       <h2 class="section-title">Mengapa harus BalikModalin?</h2>
       <div class="reasons">
         <div class="reason-box">Akurat Berdasarkan Rumus Kalkulus</div>
@@ -55,7 +57,7 @@
       </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up">
       <h2 class="section-title">Fitur Unggulan</h2>
       <div class="features">
         <div class="feature-box">
@@ -74,7 +76,7 @@
     </section>
 
   <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
       <!-- Kolom 1 -->
       <div class="footer-column">
         <div class="footer-header">
@@ -158,6 +160,13 @@
       });
   
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+});
+</script>
   </body>
 </html>
 

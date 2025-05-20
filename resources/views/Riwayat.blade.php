@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Target Laba - BalikModalin</title>
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/Riwayat.css">
 </head>
 <body class="page-transition">
@@ -22,10 +24,11 @@
     <span></span>
     <span></span>
     <span></span>
+    <span></span>
   </div>
 </header>
-
 <div class="menu" id="mobile-menu">
+  <a href="/Kalkulator"><strong>Kalkulator</strong></a>
   <a href="/HitungBalikModal">Balik Modal</a>
   <a href="/TargetLaba">Target Laba</a>
   <a href="/LabaMaksimum">Laba Maksimum</a>
@@ -67,13 +70,13 @@
 </script>
 
 
-    <div class="subtext">
+    <div class="subtext" data-aos="fade-up">
         Riwayat Penghitungan Kalkulator Balik Modal
         </div>
 
         <div class="card-container">
             @forelse($BalikModal as $index => $item)
-                <div class="riwayat-card">
+                <div class="riwayat-card" data-aos="fade-up">
                     <h3>Balik Modal #{{ $index + 1 }}</h3>
                     <p><strong>Biaya Tetap:</strong> Rp {{ number_format($item->biaya_tetap) }}</p>
                     <p><strong>Biaya per Unit:</strong> Rp {{ number_format($item->biaya_per_unit) }}</p>
@@ -82,17 +85,17 @@
                     <p><strong></strong> {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y, H:i') }}</p>
                 </div>
             @empty
-                <p class="no-data">Belum ada riwayat</p>
+                <p class="no-data" data-aos="fade-up">Belum ada riwayat</p>
             @endforelse
         </div>
 
-        <div class="subtext">
+        <div class="subtext" data-aos="fade-up">
         Riwayat Penghitungan Kalkulator Target Laba
         </div>
 
             <div class="card-container">
                 @forelse($Riwayat as $index => $item)
-                    <div class="riwayat-card">
+                    <div class="riwayat-card" data-aos="fade-up">
                         <h3>Target Laba #{{ $index + 1 }}</h3>
                         <p><strong>Biaya:</strong> Rp {{ number_format($item['biaya']) }}</p>
                         <p><strong>Harga Jual:</strong> Rp {{ number_format($item['harga_jual']) }}</p>
@@ -101,17 +104,17 @@
                         <p><strong></strong> {{ \Carbon\Carbon::parse($item['created_at'])->translatedFormat('d F Y, H:i') }}</p>
                     </div>
                 @empty
-                    <p class="no-data">Belum ada riwayat</p>
+                    <p class="no-data" data-aos="fade-up">Belum ada riwayat</p>
                 @endforelse
             </div>
 
-        <div class="subtext">
+        <div class="subtext" data-aos="fade-up">
         Riwayat Penghitungan Kalkulator Laba Maksimum
         </div>
 
             <div class="card-container">
                 @forelse($LabaMaksimum as $index => $row)
-                    <div class="riwayat-card">
+                    <div class="riwayat-card" data-aos="fade-up">
                         <h3>Laba Maksimum #{{ $index + 1 }}</h3>
                         <p><strong>Biaya Tetap:</strong> Rp {{ number_format($row['biaya_tetap']) }}</p>
                         <p><strong>Biaya Variabel:</strong> Rp {{ number_format($row['biaya_variabel']) }}</p>
@@ -121,7 +124,7 @@
                         <p><strong></strong> {{ \Carbon\Carbon::parse($row['created_at'])->translatedFormat('d F Y, H:i') }}</p>
                     </div>
                 @empty
-                    <p class="no-data">Belum ada riwayat</p>
+                    <p class="no-data" data-aos="fade-up">Belum ada riwayat</p>
                 @endforelse
             </div>
     </div>
@@ -158,5 +161,12 @@
       });
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+});
+</script>
 </body>
 </html>

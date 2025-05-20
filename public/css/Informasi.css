@@ -178,19 +178,20 @@ body {
         }
 
         .timeline-circle {
-            position: absolute;
-            width: 70px;
-            height: 70px;
-            background: #2d346b;
-            color: white;
-            border-radius: 50%;
-            font-weight: bold;
-            text-align: center;
-            line-height: 40px;
-            z-index: 2;
-            text-decoration: none;
-            top: 50%;
-            transform: translateY(-50%);
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: #2d346b;
+        color: white;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 70px; /* ini yang penting */
+        z-index: 2;
+        text-decoration: none;
+        top: 50%;
+        transform: translateY(-50%);
         }
 
         .timeline-item.left .timeline-circle {

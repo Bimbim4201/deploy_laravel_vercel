@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ $title }} | BalikModalin</title>
+  <link rel="icon" type="image/x-icon" href="img/Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/LabaMaksimum.css">
 </head>
 
@@ -23,10 +25,11 @@
     <span></span>
     <span></span>
     <span></span>
+    <span></span>
   </div>
 </header>
-
 <div class="menu" id="mobile-menu">
+  <a href="/Kalkulator"><strong>Kalkulator</strong></a>
   <a href="/HitungBalikModal">Balik Modal</a>
   <a href="/TargetLaba">Target Laba</a>
   <a href="/LabaMaksimum">Laba Maksimum</a>
@@ -69,11 +72,11 @@
 </script>
 
   <main>
-    <h1>Dapati Analisis Rancangan Bisnismu Laba atau Rugi!</h1>
+    <h1 data-aos="fade-up">Dapati Analisis Rancangan Bisnismu Laba atau Rugi!</h1>
 <form action="{{ route('LabaMaksimum.store') }}" method="POST">
   @csrf
     <div class="content">
-      <div class="card form">
+      <div class="card form" data-aos="fade-right">
         <div id="hasilBox">
           -
         </div>
@@ -99,7 +102,7 @@
       <button type="button" onclick="unduhHasil()">📥 Unduh Hasil</button>
       </div>
 
-      <div class="card visual">
+      <div class="card visual" data-aos="fade-left">
         <div class="chart-area">
           <div class="chart-box">
             <div class="chart-title">Visualisasi Input</div>
@@ -328,5 +331,12 @@
       });
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+});
+</script>
 </body>
 </html>
